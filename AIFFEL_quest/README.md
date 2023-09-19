@@ -6,7 +6,7 @@
     
 **레포 구조:**
 
-```bash
+```js
 AIFFEL_quest
 ├── Python_quest
 │   ├── Quest01
