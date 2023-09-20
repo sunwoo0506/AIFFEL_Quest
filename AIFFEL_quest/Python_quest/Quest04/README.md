@@ -9,40 +9,33 @@
 
 ```
  
-    {
-      "cell_type": "code",
-      "source": [
-        "# 물고기 리스트 생성\n",
-        "fish_list = [\n",
-        "    {\"이름\": \"Nemo\", \"speed\": 3},\n",
-        "    {\"이름\": \"Dory\", \"speed\": 5},\n",
-        "]\n",
-        "\n",
-        "# 컴프리헨션 함수: 물고기의 움직임을 출력\n",
-        "def show_fish_movement_comprehension(fish_list):\n",
-        "    # 각 물고기의 정보를 가져와 출력\n",
-        "    [print(f\"{fish['이름']} is swimming at {fish['speed']} m/s\") for fish in fish_list]\n",
-        "\n",
-        "# 제너레이터 함수: 물고기의 움직임을 생성하고 출력\n",
-        "def show_fish_movement_generator(fish_list):\n",
-        "    # 각 물고기의 정보를 가져와 값 생성\n",
-        "    for fish in fish_list:\n",
-        "        # 값 생성 및 반환\n",
-        "        yield f\"{fish['이름']} is swimming at {fish['speed']} m/s\"\n",
-        "\n",
-        "\n",
-        "print(\"Using Comprehension:\")\n",
-        "show_fish_movement_comprehension(fish_list)\n",
-        "\n",
-        "print(\"Using Generator:\")\n",
-        "generator = show_fish_movement_generator(fish_list)\n",
-        "# 제너레이터를 통해 물고기의 움직임을 가져와 출력\n",
-        "for move in generator:\n",
-        "    print(move)\n"
-      ],
-  
-}
+  # 물고기 리스트 생성
+fish_list = [
+    {"이름": "Nemo", "speed": 3},
+    {"이름": "Dory", "speed": 5},
+]
 
+# 컴프리헨션 함수: 물고기의 움직임을 출력
+def show_fish_movement_comprehension(fish_list):
+    # 각 물고기의 정보를 가져와 출력
+    [print(f"{fish['이름']} is swimming at {fish['speed']} m/s") for fish in fish_list]
+
+# 제너레이터 함수: 물고기의 움직임을 생성하고 출력
+def show_fish_movement_generator(fish_list):
+    # 각 물고기의 정보를 가져와 값 생성
+    for fish in fish_list:
+        # 값 생성 및 반환
+        yield f"{fish['이름']} is swimming at {fish['speed']} m/s"
+
+
+print("Using Comprehension:")
+show_fish_movement_comprehension(fish_list)
+
+print("Using Generator:")
+generator = show_fish_movement_generator(fish_list)
+# 제너레이터를 통해 물고기의 움직임을 가져와 출력
+for move in generator:
+    print(move)
 
 ```
 - [ ]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
