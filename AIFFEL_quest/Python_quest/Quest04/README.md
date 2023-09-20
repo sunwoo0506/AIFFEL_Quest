@@ -8,34 +8,7 @@
 
 
 ```
-    {
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyMFuIs3r5OGP9MqEAeeNT7D",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/sunwoo0506/AIFFEL_Quest/blob/main/quest_20230920.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
+ 
     {
       "cell_type": "code",
       "source": [
@@ -67,53 +40,7 @@
         "for move in generator:\n",
         "    print(move)\n"
       ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "WcUhVsDtOUk6",
-        "outputId": "7f432c7c-a6f7-4d4f-abb7-44b8db5f2e5b"
-      },
-      "execution_count": 6,
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Using Comprehension:\n",
-            "Nemo is swimming at 3 m/s\n",
-            "Dory is swimming at 5 m/s\n",
-            "Using Generator:\n",
-            "Nemo is swimming at 3 m/s\n",
-            "Dory is swimming at 5 m/s\n"
-          ]
-        }
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
-        "회고\n",
-        "\n",
-        "```\n",
-        "제너레이터 함수를 호출할 때마다 새로운 제너레이터 객체가 생성됨. 이것은 제너레이터의 특징 중 하나로, 제너레이터는 이전 상태를 기억하고 다음 값을 계산하는데 사용되며, 각 호출 사이에 상태를 공유하지 않습니다. 그렇기 때문에 바인딩한 변수를 이용해서 제너레이터를 사용해야함.   \n",
-        "```\n",
-        "\n"
-      ],
-      "metadata": {
-        "id": "jTywwzImOUwR"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [],
-      "metadata": {
-        "id": "2NK4MsFqTqF1"
-      },
-      "execution_count": null,
-      "outputs": []
-    }
-  ]
+  
 }
 
 
