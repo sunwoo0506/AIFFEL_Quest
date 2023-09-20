@@ -5,11 +5,119 @@
 
 ## PRT(Peer Review Template)
 - [ ]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
-    - 문제에서 요구하는 최종 결과물이 첨부되었는지 확인
-    - 문제를 해결하는 완성된 코드란 프로젝트 루브릭 3개 중 2개, 
-    퀘스트 문제 요구조건 등을 지칭
-        - 해당 조건을 만족하는 코드를 캡쳐해 근거로 첨부
-    
+
+
+```
+    {
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMFuIs3r5OGP9MqEAeeNT7D",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sunwoo0506/AIFFEL_Quest/blob/main/quest_20230920.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 물고기 리스트 생성\n",
+        "fish_list = [\n",
+        "    {\"이름\": \"Nemo\", \"speed\": 3},\n",
+        "    {\"이름\": \"Dory\", \"speed\": 5},\n",
+        "]\n",
+        "\n",
+        "# 컴프리헨션 함수: 물고기의 움직임을 출력\n",
+        "def show_fish_movement_comprehension(fish_list):\n",
+        "    # 각 물고기의 정보를 가져와 출력\n",
+        "    [print(f\"{fish['이름']} is swimming at {fish['speed']} m/s\") for fish in fish_list]\n",
+        "\n",
+        "# 제너레이터 함수: 물고기의 움직임을 생성하고 출력\n",
+        "def show_fish_movement_generator(fish_list):\n",
+        "    # 각 물고기의 정보를 가져와 값 생성\n",
+        "    for fish in fish_list:\n",
+        "        # 값 생성 및 반환\n",
+        "        yield f\"{fish['이름']} is swimming at {fish['speed']} m/s\"\n",
+        "\n",
+        "\n",
+        "print(\"Using Comprehension:\")\n",
+        "show_fish_movement_comprehension(fish_list)\n",
+        "\n",
+        "print(\"Using Generator:\")\n",
+        "generator = show_fish_movement_generator(fish_list)\n",
+        "# 제너레이터를 통해 물고기의 움직임을 가져와 출력\n",
+        "for move in generator:\n",
+        "    print(move)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WcUhVsDtOUk6",
+        "outputId": "7f432c7c-a6f7-4d4f-abb7-44b8db5f2e5b"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Using Comprehension:\n",
+            "Nemo is swimming at 3 m/s\n",
+            "Dory is swimming at 5 m/s\n",
+            "Using Generator:\n",
+            "Nemo is swimming at 3 m/s\n",
+            "Dory is swimming at 5 m/s\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "회고\n",
+        "\n",
+        "```\n",
+        "제너레이터 함수를 호출할 때마다 새로운 제너레이터 객체가 생성됨. 이것은 제너레이터의 특징 중 하나로, 제너레이터는 이전 상태를 기억하고 다음 값을 계산하는데 사용되며, 각 호출 사이에 상태를 공유하지 않습니다. 그렇기 때문에 바인딩한 변수를 이용해서 제너레이터를 사용해야함.   \n",
+        "```\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "jTywwzImOUwR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "2NK4MsFqTqF1"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
+
+
+```
 - [ ]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
 주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?**
     - 해당 코드 블럭에 doc string/annotation이 달려 있는지 확인
