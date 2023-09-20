@@ -1,11 +1,11 @@
 ## AIFFEL Campus Online Code Peer Review Templete
-- 코더 : 코더의 이름을 작성하세요.
-- 리뷰어 : 리뷰어의 이름을 작성하세요.
+- 코더 : 오선우
+- 리뷰어 : 서승호
 
 
 ## PRT(Peer Review Template)
-- [ ]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
-
+- [x]  **1. 주어진 문제를 해결하는 완성된 코드가 제출되었나요?**
+입력값을 받는 부분이 없습니다. comprehension, generator는 잘 작동합니다.
 
 ```
  
