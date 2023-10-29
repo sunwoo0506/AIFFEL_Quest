@@ -2,6 +2,5 @@ $$**밑시딥 MainQuest**
 $$
 
 ```
-1. 학습데이터 파일 
-2. 실습파일
+Rock_scissor_paper 분류기
 ```
